@@ -1,0 +1,80 @@
+ <header style="width: 100%;height:200px;background-color: #ffffff;">
+       <img style="height: 200px; margin-left: 40%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxWtO9b9k86UfAqwrgEM4Wb62uYnDc2opiJA&usqp=CAU" alt="" style="margin-left: 40%; margin-top: 10px;">
+</header>
+ <section style="background-color: rgb(108, 108, 214);border-radius: 30px;">
+        
+    
+<div class="container-fluid banner">
+        <div class="container mt-3">
+        <div class="row">
+            
+          
+
+            {{#each products}}
+             
+            <div class="col-md-3 p-3">
+                <div class="card" style="width: 15rem; height: 20rem;">
+                  <img class="card-img-top" src="/product-images/{{this._id}}.jpg" alt="Card image cap" style="height: 8rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">Rs.{{this.price}}</p>
+                    <p class="card-text">{{this.Discription}}</p>
+                    
+                     
+                     <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add to cart</button>
+                </div>
+             </div>
+            </div>
+            {{/each}}
+            
+
+        </div>
+        </div>
+</div>
+    </section>
+        <style>
+.card{
+    border: 1px;
+    border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+.slide{
+    border: 1px;
+    border-radius: 10px;
+  padding: 0px;
+  box-shadow: 0px 0px 5px 5px #dfdfdf;
+}
+.card-text1{
+    color: #5B9D4F;
+}
+.card-text{
+    color: #c4d6c4;
+}
+.card-title{
+   font-size: 20px; 
+   font-weight: bold;
+}
+
+.banner{
+    height: 100%;
+    width: 100%;
+    background: url('data:image/jpeg;base64,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');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.btn{
+    border-radius: 20px;
+}
+
+.info{
+  font-size: 1.25rem;
+    margin-top: 23px;
+    margin-left: 207px;
+</style>

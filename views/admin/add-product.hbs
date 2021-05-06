@@ -1,0 +1,58 @@
+<section class="main">
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-6" style="width: 60%;">
+                <h2 class="text-center" style="margin-top: 10px;">Add Products</h2>
+                <form action="/admin/add-product" method="POST" enctype="multipart/form-data" name="myForm" class="needs-validation" style="margin-left: 100px; margin-right: 200p;">
+                <labe for="">Name</labe>
+                <input type="text" name="name" class="form-control" required>
+
+                <labe for="">Category</labe>
+                <input type="text" name="category" class="form-control" required>
+
+                <labe for="">Price</labe>
+                <input type="text" name="price" class="form-control" required>
+
+                <labe for="">Discription</labe>
+                <input type="text" name="Discription" class="form-control" required>
+
+                <labe for="">Image</labe>
+                <input type="file" name="Image" class="form-control" >
+
+                <button type="submit" class="btn btn-success mt-4"  style="margin-left: 50%; width: 60%;" value="Submit">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .btn:hover {background-color: #80ffaa}
+    .btn {
+  padding: 15px 25px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.main{
+    background-color: rgb(155, 155, 241);
+}
+</style>
+
+<script>
+ var  form =document.querySelector('.need-validation');
+
+ form.addEventListener('submit', function(event){
+     if (form.checkvalidity()===false){
+         event.preventDefault();
+         event.stopPropagation();
+     }
+     form.classList.add('was-validated')
+ })
+</script>

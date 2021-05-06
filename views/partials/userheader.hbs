@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>e-chruch</title>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand text-white" href="/">e-Chruch </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white " href="/home">product <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/cart">cart<span class="badge badge-info" id="cart-count">{{cartCount}}</span></a>
+      </li>
+      {{#if user}}
+      <li class="nav-items">
+        <a class="nav-link text-white" href="/orders">ordres<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-items">
+        <a class="nav-link text-white" href="/info-view">Announcements<span class="sr-only">(current)</span></a>
+      </li>
+      
+      {{/if}}
+     
+    </ul>
+    <div class="dropdown">
+    <button class="btn dropdown-toggle btn-success" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{#if user}}
+     {{user.Name}}
+     {{else}}
+      Account
+      {{/if}}
+
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+    {{#if user}}
+     <a class="dropdown-item" href="/logout">logout</a>
+     {{else}}
+      <a class="dropdown-item" href="/login">Login</a>
+    {{/if}}
+    
+    
+  </div>
+</div>
+  </div>
+</nav>
+    </header>
+
+    
+<style>
+    .nav-link{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .nav-links{
+       font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        font-weight: normal; 
+    }
+    .header{
+        border: 1px;
+        border-radius: 10px;
+  padding: 0px;
+  box-shadow: 0px 0px 5px 5px #dfdfdf;
+  
+    }
+    
+   
+
+</style>
+
+

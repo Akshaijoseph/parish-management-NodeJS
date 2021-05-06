@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center">Create new account</h2>
+            <form action="/signup" method="POST" name="myForm" class="needs-validation Forms">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="Name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label>House Name</label>
+                    <input type="text" class="form-control" name="hName" placeholder="Enter your HouseName " required>
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="Email" class="form-control" name="Email" placeholder="Enter email" required>
+                    
+                </div>
+                
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                </div>
+                
+                
+                <a href="/login">Already have account ?</a>
+                <button type="submit" class="btn btn-success float-right" style="border-radius: 20px;">Signup</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    
+    .Forms{
+        background:rgb(82, 177, 201);
+        padding: 30px;
+        border-radius: 10px;
+        border-color: red;
+    }
+</style>
+

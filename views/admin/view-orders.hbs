@@ -1,0 +1,43 @@
+<section>
+    <div class="container">
+      
+        <table class="table mt-5" id="orderstable">
+  <thead class="thead" style="background-color: #5B9D4F; color:white">
+    <tr>
+      
+      <th scope="col">User ID</th>
+      <th scope="col">Delivery Details</th>
+      <th scope="col">Payment Method</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Total Amount</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+      {{#each orders}}
+    <tr>
+      
+      <td>{{this.userId}}</td>
+      <td>{{this.deliveryDetails.address}}</td>
+      <td>{{this.paymentMethod}}</td>
+      <td>{{this.deliveryDetails.pincode}}</td>
+      <td>{{this.totalAmount}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.date}}</td>
+      
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+    </div>
+</section>
+
+<script>
+  $(function () {
+    $('#orderstable').DataTable();
+  });
+</script>

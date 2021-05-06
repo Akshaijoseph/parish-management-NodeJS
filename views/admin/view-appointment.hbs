@@ -1,0 +1,39 @@
+<section>
+    <div class="container">
+        
+        <table class="table mt-5" id="productstable">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">name</th>
+      <th scope="col">Housename</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">meeting online/ofline</th>
+      <th scope="col">mobile Number</th> 
+      <th scope="col">Purpose</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row"></th>
+      <td>{{this.name}}</td>
+      <td>{{this.hname}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.time}}</td>
+      <td>{{this.mode}}</td>
+      <td>{{this.mob}}</td>
+
+      <td>{{this.purpose}}</td>
+      
+      
+    </tr>   
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+</section>

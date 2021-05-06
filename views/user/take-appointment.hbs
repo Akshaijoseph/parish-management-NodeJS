@@ -1,0 +1,75 @@
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center" style="    margin-top: 50px;margin-left: 96px;margin-right: -352px;">Take Your Appointment</h2>
+                <form action="/user/take-appointment" method="POST" name="myForm" class="needs-validation" style="margin-left: 251px;margin-right: -237px;" >
+                <labe for="">* Name</labe>
+                <input type="text" name="name" class="form-control" required>
+
+                <label for="">* House Name</label>
+                <input type="text" name="hname" class="form-control" required>
+
+                <label for="">* Enter your Mob. Number</label>
+                <input type="tel" name="mob" class="form-control" pattern="[0-9]{10}" maxlength="10" required >
+
+                <label for="">* date</label>
+                <input type="date" name="date" class="form-control"required>
+
+                <label for="">* You can choose online/ofline mode for meeting</label>
+                <select name="mode" id="mode" class="form-control" required>
+                <option value="online">Online</option>
+                <option value="ofline">Ofline</option>
+                </select>
+
+
+                <label for="">* Choose a time </label>
+                <select name="time" id="time" class="form-control" required>
+                <option value="10AM">10AM</option>
+                <option value="12AM">12AM</option>
+                 <option value="03PM">03PM</option>
+                 <option value="04PM">04PM</option>
+                 <option value="05PM">05PM</option>
+             </select>
+  
+               <label>* Purpose</label>
+                <input type="text" name="purpose" class="form-control" required>
+                 
+                <label> if Online meeting   enter your watsapp number</label>
+                <input type="tel" name="watsapp" class="form-control" pattern="[0-9]{10}" maxlength="10">
+           
+                <button type="submit" class="btn btn-success mt-4" style="border-radius: 20px;margin-left: 200px; width: 20%;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+   <p  style="margin-left: 30%;"> *if you choose online Appointment Priest will make a video contact with you.....</p>
+</section>
+<footer style="width: 100%; height: 150px; background-color: #cccccc;">
+  <p style="margin-left: 45%; margin-top: 5px;"> @st.mary's chruch</p>
+  <p style="margin-left: 45%; margin-top: 2px;"><a href="#">st.marys@chruch.in</a></p>
+   <img style="height: 50px; margin-left: 50%;" src="https://png.pngtree.com/png-clipart/20190515/original/pngtree-facebook-icon-png-image_3560489.jpg" alt="" >
+</footer>
+
+
+
+
+
+<style>
+    .container{
+        
+        width: 100%;
+        height: 100%;
+        background-color:rgb(207, 209, 216);
+        border-radius: 40px;
+    }
+    .section{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(192, 193, 201);
+    }
+   .div{
+           margin-top: 90px;
+        margin-left: 36%;
+   }
+</style>

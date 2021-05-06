@@ -1,0 +1,39 @@
+<header style="width: 100%;height:200px;background-color: #ffffff;">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxWtO9b9k86UfAqwrgEM4Wb62uYnDc2opiJA&usqp=CAU" alt="" style="margin-left: 40%; margin-top: 10px;">
+</header>
+<section style="background-color: rgb(173, 187, 190);  border-radius: 20px;">
+    <div class="container">
+        
+        <table class="table mt-5" id="productstable">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Announcements</th>
+      <th scope="col">date</th>
+      
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row"></th>
+      <td>{{this.name}}</td>
+      <td>{{this.date}}</td>
+     
+      
+      
+    </tr>   
+    {{/each}}
+    
+  </tbody>
+</table>
+    </div>
+</section>
+<footer style="width: 100%; height: 150px; background-color: #cccccc; margin-top: 90px;">
+  <p style="margin-left: 45%; margin-top: 5px;"> @st.mary's chruch</p>
+  <p style="margin-left: 45%; margin-top: 2px;"><a href="#">st.marys@chruch.in</a></p>
+   <img style="height: 50px; margin-left: 50%;" src="https://png.pngtree.com/png-clipart/20190515/original/pngtree-facebook-icon-png-image_3560489.jpg" alt="" >
+</footer>
+
